@@ -12,10 +12,10 @@ var traveled_distance: float = 0.0
 func _ready() -> void:
 	# 设置碰撞层和遮罩
 	if is_player_bullet:
-		collision_layer = 4  # PlayerBullet层
+		collision_layer = 4  # PlayerBullet层 (Layer 3 in 1-indexed = bit 4 in 0-indexed)
 		collision_mask = 2 | 16 | 32  # Enemy | Wall | Destructible
 	else:
-		collision_layer = 8  # EnemyBullet层
+		collision_layer = 8  # EnemyBullet层 (Layer 4 in 1-indexed = bit 8 in 0-indexed)
 		collision_mask = 1 | 16 | 32  # Player | Wall | Destructible
 	
 	# 连接碰撞信号
@@ -35,10 +35,6 @@ func _physics_process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	# 击中物体
 	if body.has_method("take_damage"):
-		body.take_damage(damage)
-	
-	# 如果击中可破坏物体
-	if body.is_in_group("destructible"):
 		body.take_damage(damage)
 	
 	# 销毁子弹

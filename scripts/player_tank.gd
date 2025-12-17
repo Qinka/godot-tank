@@ -100,9 +100,10 @@ func take_damage(amount: int) -> void:
 		# 受伤后无敌时间
 		is_invulnerable = true
 		invulnerable_timer.start()
-		Global.lose_life()
 
 func die() -> void:
+	# 失去一条命
+	Global.lose_life()
 	# 创建爆炸效果（如果有）
 	queue_free()
 
