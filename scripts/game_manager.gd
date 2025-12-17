@@ -4,6 +4,7 @@ extends Node
 @onready var player: CharacterBody2D = null
 @onready var enemy_spawner: Node2D = null
 @onready var hud: Control = null
+@onready var pause_menu: Control = null
 
 func _ready() -> void:
 	# 查找场景中的节点
@@ -12,6 +13,7 @@ func _ready() -> void:
 	player = get_tree().get_first_node_in_group("player")
 	enemy_spawner = get_tree().get_first_node_in_group("enemy_spawner")
 	hud = get_tree().get_first_node_in_group("hud")
+	pause_menu = get_tree().get_first_node_in_group("pause_menu")
 	
 	# 设置游戏状态
 	Global.change_state(Global.GameState.PLAYING)
@@ -35,12 +37,12 @@ func toggle_pause() -> void:
 		hide_pause_menu()
 
 func show_pause_menu() -> void:
-	# TODO: 显示暂停菜单
-	pass
+	if pause_menu:
+		pause_menu.show_pause()
 
 func hide_pause_menu() -> void:
-	# TODO: 隐藏暂停菜单
-	pass
+	if pause_menu:
+		pause_menu.hide_pause()
 
 func _on_wave_started(wave_number: int) -> void:
 	print("Wave ", wave_number, " started!")

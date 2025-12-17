@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://gameworld123"]
+[gd_scene load_steps=8 format=3 uid="uid://gameworld123"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_manager"]
 [ext_resource type="PackedScene" uid="uid://dqkrm3ypxgktj" path="res://scenes/entities/player_tank.tscn" id="2_player"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://brick123" path="res://scenes/environment/brick.tscn" id="4_brick"]
 [ext_resource type="Script" path="res://scripts/enemy_spawner.gd" id="5_spawner"]
 [ext_resource type="PackedScene" uid="uid://hud123" path="res://scenes/game/hud.tscn" id="6_hud"]
+[ext_resource type="PackedScene" uid="uid://pausemenu123" path="res://scenes/menu/pause_menu.tscn" id="7_pause"]
 
 [node name="GameWorld" type="Node2D"]
 
@@ -271,6 +272,8 @@ position = Vector2(100, 668)
 position = Vector2(924, 668)
 
 [node name="HUD" parent="." instance=ExtResource("6_hud")]
+
+[node name="PauseMenu" parent="." instance=ExtResource("7_pause") groups=["pause_menu"]]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(512, 384)
