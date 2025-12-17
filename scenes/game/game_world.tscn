@@ -1,0 +1,277 @@
+[gd_scene load_steps=7 format=3 uid="uid://gameworld123"]
+
+[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_manager"]
+[ext_resource type="PackedScene" uid="uid://dqkrm3ypxgktj" path="res://scenes/entities/player_tank.tscn" id="2_player"]
+[ext_resource type="PackedScene" uid="uid://wall123" path="res://scenes/environment/wall.tscn" id="3_wall"]
+[ext_resource type="PackedScene" uid="uid://brick123" path="res://scenes/environment/brick.tscn" id="4_brick"]
+[ext_resource type="Script" path="res://scripts/enemy_spawner.gd" id="5_spawner"]
+[ext_resource type="PackedScene" uid="uid://hud123" path="res://scenes/game/hud.tscn" id="6_hud"]
+
+[node name="GameWorld" type="Node2D"]
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("1_manager")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_left = -512.0
+offset_top = -384.0
+offset_right = 1536.0
+offset_bottom = 1152.0
+color = Color(0.15, 0.2, 0.15, 1)
+
+[node name="PlayerTank" parent="." instance=ExtResource("2_player") groups=["player"]]
+position = Vector2(512, 384)
+
+[node name="Walls" type="Node2D" parent="."]
+
+[node name="Wall" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(0, 0)
+
+[node name="Wall2" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(1024, 0)
+
+[node name="Wall3" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(0, 768)
+
+[node name="Wall4" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(1024, 768)
+
+[node name="Wall5" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(50, 0)
+
+[node name="Wall6" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(100, 0)
+
+[node name="Wall7" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(150, 0)
+
+[node name="Wall8" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(200, 0)
+
+[node name="Wall9" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(250, 0)
+
+[node name="Wall10" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(300, 0)
+
+[node name="Wall11" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(350, 0)
+
+[node name="Wall12" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(400, 0)
+
+[node name="Wall13" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(450, 0)
+
+[node name="Wall14" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(500, 0)
+
+[node name="Wall15" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(550, 0)
+
+[node name="Wall16" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(600, 0)
+
+[node name="Wall17" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(650, 0)
+
+[node name="Wall18" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(700, 0)
+
+[node name="Wall19" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(750, 0)
+
+[node name="Wall20" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(800, 0)
+
+[node name="Wall21" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(850, 0)
+
+[node name="Wall22" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(900, 0)
+
+[node name="Wall23" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(950, 0)
+
+[node name="Wall24" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(0, 50)
+
+[node name="Wall25" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(0, 100)
+
+[node name="Wall26" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(0, 150)
+
+[node name="Wall27" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(0, 200)
+
+[node name="Wall28" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(0, 250)
+
+[node name="Wall29" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(0, 300)
+
+[node name="Wall30" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(0, 350)
+
+[node name="Wall31" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(0, 400)
+
+[node name="Wall32" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(0, 450)
+
+[node name="Wall33" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(0, 500)
+
+[node name="Wall34" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(0, 550)
+
+[node name="Wall35" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(0, 600)
+
+[node name="Wall36" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(0, 650)
+
+[node name="Wall37" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(0, 700)
+
+[node name="Wall38" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(1024, 50)
+
+[node name="Wall39" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(1024, 100)
+
+[node name="Wall40" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(1024, 150)
+
+[node name="Wall41" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(1024, 200)
+
+[node name="Wall42" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(1024, 250)
+
+[node name="Wall43" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(1024, 300)
+
+[node name="Wall44" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(1024, 350)
+
+[node name="Wall45" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(1024, 400)
+
+[node name="Wall46" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(1024, 450)
+
+[node name="Wall47" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(1024, 500)
+
+[node name="Wall48" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(1024, 550)
+
+[node name="Wall49" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(1024, 600)
+
+[node name="Wall50" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(1024, 650)
+
+[node name="Wall51" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(1024, 700)
+
+[node name="Wall52" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(50, 768)
+
+[node name="Wall53" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(100, 768)
+
+[node name="Wall54" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(150, 768)
+
+[node name="Wall55" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(200, 768)
+
+[node name="Wall56" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(250, 768)
+
+[node name="Wall57" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(300, 768)
+
+[node name="Wall58" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(350, 768)
+
+[node name="Wall59" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(400, 768)
+
+[node name="Wall60" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(450, 768)
+
+[node name="Wall61" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(500, 768)
+
+[node name="Wall62" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(550, 768)
+
+[node name="Wall63" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(600, 768)
+
+[node name="Wall64" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(650, 768)
+
+[node name="Wall65" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(700, 768)
+
+[node name="Wall66" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(750, 768)
+
+[node name="Wall67" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(800, 768)
+
+[node name="Wall68" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(850, 768)
+
+[node name="Wall69" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(900, 768)
+
+[node name="Wall70" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector2(950, 768)
+
+[node name="Obstacles" type="Node2D" parent="."]
+
+[node name="Brick" parent="Obstacles" instance=ExtResource("4_brick")]
+position = Vector2(300, 300)
+
+[node name="Brick2" parent="Obstacles" instance=ExtResource("4_brick")]
+position = Vector2(350, 300)
+
+[node name="Brick3" parent="Obstacles" instance=ExtResource("4_brick")]
+position = Vector2(700, 500)
+
+[node name="Brick4" parent="Obstacles" instance=ExtResource("4_brick")]
+position = Vector2(750, 500)
+
+[node name="Brick5" parent="Obstacles" instance=ExtResource("4_brick")]
+position = Vector2(500, 200)
+
+[node name="EnemySpawner" type="Node2D" parent="." groups=["enemy_spawner"]]
+script = ExtResource("5_spawner")
+
+[node name="SpawnTimer" type="Timer" parent="EnemySpawner"]
+
+[node name="WaveTimer" type="Timer" parent="EnemySpawner"]
+
+[node name="SpawnPoint1" type="Marker2D" parent="EnemySpawner"]
+position = Vector2(100, 100)
+
+[node name="SpawnPoint2" type="Marker2D" parent="EnemySpawner"]
+position = Vector2(924, 100)
+
+[node name="SpawnPoint3" type="Marker2D" parent="EnemySpawner"]
+position = Vector2(100, 668)
+
+[node name="SpawnPoint4" type="Marker2D" parent="EnemySpawner"]
+position = Vector2(924, 668)
+
+[node name="HUD" parent="." instance=ExtResource("6_hud")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(512, 384)
+zoom = Vector2(1, 1)
