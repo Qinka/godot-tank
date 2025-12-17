@@ -3,6 +3,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wall"]
 size = Vector2(50, 50)
 
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_wall"]
+size = Vector2(50, 50)
+
 [node name="Wall" type="StaticBody2D"]
 collision_layer = 16
 collision_mask = 0
@@ -13,6 +16,3 @@ shape = SubResource("RectangleShape2D_wall")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.3, 0.3, 0.3, 1)
 texture = SubResource("PlaceholderTexture2D_wall")
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_wall"]
-size = Vector2(50, 50)

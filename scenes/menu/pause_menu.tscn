@@ -2,6 +2,12 @@
 
 [ext_resource type="Script" path="res://scripts/pause_menu.gd" id="1_pause"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_pause"]
+font_size = 32
+font_color = Color(1, 1, 1, 1)
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
 [node name="PauseMenu" type="Control"]
 process_mode = 3
 layout_mode = 3
@@ -74,9 +80,3 @@ custom_minimum_size = Vector2(200, 40)
 layout_mode = 2
 text = "返回菜单"
 theme_override_font_sizes/font_size = 20
-
-[sub_resource type="LabelSettings" id="LabelSettings_pause"]
-font_size = 32
-font_color = Color(1, 1, 1, 1)
-outline_size = 2
-outline_color = Color(0, 0, 0, 1)

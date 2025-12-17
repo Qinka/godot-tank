@@ -2,6 +2,16 @@
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_menu"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_title"]
+font_size = 64
+font_color = Color(1, 1, 1, 1)
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_version"]
+font_size = 16
+font_color = Color(0.7, 0.7, 0.7, 1)
+
 [node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -68,13 +78,3 @@ size_flags_horizontal = 0
 size_flags_vertical = 8
 text = "v1.0.0"
 label_settings = SubResource("LabelSettings_version")
-
-[sub_resource type="LabelSettings" id="LabelSettings_title"]
-font_size = 64
-font_color = Color(1, 1, 1, 1)
-outline_size = 4
-outline_color = Color(0, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_version"]
-font_size = 16
-font_color = Color(0.7, 0.7, 0.7, 1)

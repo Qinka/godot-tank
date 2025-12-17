@@ -2,6 +2,24 @@
 
 [ext_resource type="Script" path="res://scripts/game_over.gd" id="1_gameover"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_gameover"]
+font_size = 56
+font_color = Color(1, 0.3, 0.3, 1)
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_score"]
+font_size = 36
+font_color = Color(1, 1, 1, 1)
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_stats"]
+font_size = 24
+font_color = Color(0.9, 0.9, 0.9, 1)
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
 [node name="GameOver" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -78,21 +96,3 @@ layout_mode = 2
 size_flags_horizontal = 4
 text = "返回菜单"
 theme_override_font_sizes/font_size = 24
-
-[sub_resource type="LabelSettings" id="LabelSettings_gameover"]
-font_size = 56
-font_color = Color(1, 0.3, 0.3, 1)
-outline_size = 4
-outline_color = Color(0, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_score"]
-font_size = 36
-font_color = Color(1, 1, 1, 1)
-outline_size = 3
-outline_color = Color(0, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_stats"]
-font_size = 24
-font_color = Color(0.9, 0.9, 0.9, 1)
-outline_size = 2
-outline_color = Color(0, 0, 0, 1)
