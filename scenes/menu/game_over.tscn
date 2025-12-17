@@ -1,0 +1,98 @@
+[gd_scene load_steps=2 format=3 uid="uid://gameover123"]
+
+[ext_resource type="Script" path="res://scripts/game_over.gd" id="1_gameover"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gameover"]
+font_size = 56
+font_color = Color(1, 0.3, 0.3, 1)
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_score"]
+font_size = 36
+font_color = Color(1, 1, 1, 1)
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_stats"]
+font_size = 24
+font_color = Color(0.9, 0.9, 0.9, 1)
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gameover")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.1, 0.05, 0.05, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="GameOverLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "游戏结束
+GAME OVER"
+horizontal_alignment = 1
+vertical_alignment = 1
+label_settings = SubResource("LabelSettings_gameover")
+
+[node name="Spacer1" type="Control" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="FinalScoreLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "最终分数: 0"
+horizontal_alignment = 1
+label_settings = SubResource("LabelSettings_score")
+
+[node name="StatsLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "击杀敌人: 0
+存活波次: 0"
+horizontal_alignment = 1
+label_settings = SubResource("LabelSettings_stats")
+
+[node name="Spacer2" type="Control" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="RestartButton" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "重新开始"
+theme_override_font_sizes/font_size = 24
+
+[node name="MenuButton" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "返回菜单"
+theme_override_font_sizes/font_size = 24
